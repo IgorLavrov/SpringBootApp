@@ -56,5 +56,5 @@ public class ProductController {
         }
     }
 
-    // Add more endpoints as needed for managing products
+
 }

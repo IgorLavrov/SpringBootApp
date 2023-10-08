@@ -36,5 +36,5 @@ public class CustomerController {
         return ResponseEntity.status(HttpStatus.CREATED).body(createdCustomer);
     }
 
-    // Add more endpoints as needed
+
 }

@@ -40,11 +40,11 @@ public class CustomerOrderController {
     public ResponseEntity<Void> deleteCustomerOrder(@PathVariable Long id) {
         boolean deleted = customerOrderService.deleteCustomerOrder(id);
         if (deleted) {
-            return ResponseEntity.noContent().build(); // Deletion was successful
+            return ResponseEntity.noContent().build();
         } else {
-            return ResponseEntity.notFound().build(); // Deletion failed or item not found
+            return ResponseEntity.notFound().build();
         }
     }
 
-    // Add more endpoints as needed for updating and handling customer orders
+
 }

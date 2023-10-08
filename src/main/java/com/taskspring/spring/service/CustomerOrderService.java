@@ -25,16 +25,16 @@ public class CustomerOrderService {
     }
 
     public CustomerOrder createCustomerOrder(CustomerOrder customerOrder) {
-        // You can add validation or business logic here if needed
+
         return customerOrderRepository.save(customerOrder);
     }
     public boolean deleteCustomerOrder(Long id) {
         try {
             customerOrderRepository.deleteById(id);
-            return true; // Deletion was successful
+            return true;
         } catch (Exception e) {
-            return false; // Deletion failed
+            return false;
         }
     }
-    // You can implement more methods for updating and handling customer orders
+
 }

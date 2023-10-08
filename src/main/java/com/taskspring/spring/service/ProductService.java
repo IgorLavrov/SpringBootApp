@@ -26,16 +26,16 @@ public class ProductService {
     }
 
     public Product createProduct(Product product) {
-        // You can add validation or business logic here if needed
+
         return productRepository.save(product);
     }
 
     public boolean deleteProduct(Long id) {
         try {
             productRepository.deleteById(id);
-            return true; // Deletion was successful
+            return true;
         } catch (Exception e) {
-            return false; // Deletion failed
+            return false;
         }
     }
     public Product updateProduct(Long id, Product updatedProduct) {
@@ -43,19 +43,18 @@ public class ProductService {
         if (existingProductOptional.isPresent()) {
             Product existingProduct = existingProductOptional.get();
 
-            // Update the fields of the existing product with the new values
+
             existingProduct.setName(updatedProduct.getName());
             existingProduct.setSkuCode(updatedProduct.getSkuCode());
             existingProduct.setUnitPrice(updatedProduct.getUnitPrice());
-            // Add more fields to update as needed
 
             return productRepository.save(existingProduct);
         } else {
-            return null; // Product with the given ID doesn't exist
+            return null;
         }
     }
 
 
 
-    // You can implement more methods for updating and handling products
+
 }

@@ -21,9 +21,9 @@ public class CustomerService {
     }
 
     public Customer createCustomer(Customer customer) {
-        // Add validation or business logic if needed
+
         return customerRepository.save(customer);
     }
 
-    // Add more methods as per your business requirements
+
 }
